@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><title>Graphic Design Guide - EarnSmart</title>
+</head>
+<body>
+    <nav><div class="logo">EarnSmart</div></nav>
+    <div class="container">
+        <div class="card" style="border-left:none;">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800" style="width:100%; border-radius:10px;">
+            <h1>Graphic Designing Se Mahana $500 Kaise Kamayein?</h1>
+            <p>Graphic designing aik aisi skill hai jis ki har business ko zaroorat hoti hai. Agar aap ko colors aur design ka shauk hai toh aap ye shuru kar sakte hain.</p>
+            <h3>Shuruat Kaise Karein?</h3>
+            <p>Aap ko mahir banne ke liye Adobe Photoshop ya Illustrator seekhne ki zaroorat nahi, aap <strong>Canva</strong> se shuruat kar sakte hain jo ke bilkul free hai.</p>
+            <ul>
+                <li>Logo Designing</li>
+                <li>Social Media Posts (Instagram/Facebook)</li>
+                <li>YouTube Thumbnails</li>
+            </ul>
+            <h3>Paise Kahan Se Milenge?</h3>
+            <p>Fiverr aur Upwork par apni profile banayein. Aik achay logo ke aap $20 se $50 tak charge kar sakte hain. Rozana agar aap 2 orders bhi lete hain toh mahina lakhon mein kama sakte hain.</p>
+            <a href="index.html" class="btn-read" style="background:#333;">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+
