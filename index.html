@@ -4,99 +4,241 @@
     <meta name="google-site-verification" content="X4FP-y7MQmptGMN" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Online Earning 2026, AI Side Hustle USA, Crypto Passive Income, TikTok Automation UK">
+    
+    <meta name="keywords" content="Online Earning 2026, AI Side Hustle USA, Crypto Passive Income, TikTok Automation, Earn Money Online, Make Money with AI, Passive Income Strategies">
+    <meta name="description" content="EarnSmart Premium Global Portal: Master the art of online earning in 2026 with our 2000+ word deep-dive guides on AI, Crypto, and Automation.">
+    
     <title>EarnSmart | Premium Global Earning Portal</title>
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPNNLFJ22K"></script>
     <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-RPNNLFJ22K');</script>
+    
     <link rel="stylesheet" href="style.css">
+    
     <style>
         :root { --primary: #00f2ea; --secondary: #ff0050; --dark: #0f172a; --gold: #f2a900; }
-        body { background-color: #020617; font-family: 'Inter', sans-serif; color: #f8fafc; margin: 0; }
-        .hero-smart-link { background: linear-gradient(90deg, var(--secondary), #7000ff); color: white !important; padding: 25px; text-align: center; display: block; border-radius: 15px; text-decoration: none; font-weight: 900; font-size: 1.6rem; margin: 20px 0; animation: glow 2s infinite alternate; border: 1px solid rgba(255,255,255,0.2); text-transform: uppercase; }
+        
+        /* 3D Scene Setup */
+        body { 
+            background-color: #020617; 
+            font-family: 'Inter', sans-serif; 
+            color: #f8fafc; 
+            margin: 0; 
+            perspective: 1200px; /* 3D effect ke liye */
+            overflow-x: hidden;
+        }
+
+        /* Sticky Navigation with Glassmorphism */
+        nav {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* 3D Logo */
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transform: translateZ(30px);
+            text-shadow: 0 0 15px rgba(0, 242, 234, 0.5);
+        }
+
+        /* Search Bar Style */
+        .search-box {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            padding: 10px 20px;
+            display: flex;
+            box-shadow: 0 0 20px rgba(0, 242, 234, 0.1);
+        }
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            width: 100%;
+            outline: none;
+            padding: 5px;
+        }
+
+        /* Categories Menu */
+        .cat-menu {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .cat-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            padding: 5px 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .cat-menu a:hover { background: var(--primary); color: #000; transform: translateZ(20px); }
+
+        .hero-smart-link { 
+            background: linear-gradient(90deg, var(--secondary), #7000ff); 
+            color: white !important; 
+            padding: 20px; 
+            border-radius: 12px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            text-align: center;
+            animation: glow 2s infinite alternate; 
+            transform: translateZ(20px);
+        }
         @keyframes glow { from { box-shadow: 0 0 10px #ff0050; } to { box-shadow: 0 0 30px #7000ff; } }
+
+        /* Main Layout Grid */
+        .main-layout { display: flex; gap: 20px; padding: 20px; max-width: 1200px; margin: auto; }
+        .content-area { flex: 3; }
+
+        .article-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+            gap: 15px; 
+            padding-bottom: 30px;
+        }
+
+        /* 3D Mini Card Animation */
+        .mini-card { 
+            background: #1e293b; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            border: 1px solid #334155; 
+            transition: 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-style: preserve-3d; /* Required for 3D */
+            cursor: pointer;
+        }
+        .mini-card:hover { 
+            transform: rotateY(15deg) rotateX(10deg) translateY(-10px) translateZ(20px); 
+            border-color: var(--primary); 
+            box-shadow: 0 15px 35px rgba(0, 242, 234, 0.2);
+        }
+        .mini-card img { width: 100%; height: 100px; object-fit: cover; transition: 0.5s; }
+        .mini-card:hover img { transform: scale(1.1); }
+        .mini-card h4 { font-size: 0.85rem; padding: 8px; margin: 0; color: #e2e8f0; text-align: center; height: 35px; overflow: hidden; }
+
+        .section-title { border-left: 5px solid var(--primary); padding-left: 15px; font-size: 1.8rem; margin: 40px 0 20px; }
         
-        .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; padding: 10px; }
-        .mini-card { background: #1e293b; border-radius: 10px; overflow: hidden; border: 1px solid #334155; transition: 0.3s; }
-        .mini-card:hover { transform: translateY(-5px); border-color: var(--primary); }
-        .mini-card img { width: 100%; height: 100px; object-fit: cover; }
-        .mini-card h4 { font-size: 0.85rem; padding: 5px; margin: 0; color: #e2e8f0; text-align: center; height: 35px; overflow: hidden; }
-        
-        .read-more-btn { display: block; background: var(--primary); color: #000 !important; padding: 5px; text-align: center; text-decoration: none; font-size: 0.75rem; font-weight: 800; }
-        .section-title { border-left: 5px solid var(--primary); padding-left: 15px; font-size: 1.8rem; margin: 40px 0 20px; color: var(--primary); }
-        .sidebar { background: #0f172a; padding: 20px; border-radius: 15px; border: 1px solid #1e293b; margin-top: 20px; }
-        .sidebar-link { color: #cbd5e1; text-decoration: none; display: block; padding: 8px 0; border-bottom: 1px solid #1e293b; font-size: 0.9rem; }
-        .sidebar-link:hover { color: var(--primary); }
-        
+        /* Sidebar and Internal Linking */
+        .sidebar { flex: 1; background: #0f172a; padding: 20px; border-radius: 15px; border: 1px solid #1e293b; height: fit-content; }
+        .sidebar-link { color: #cbd5e1; text-decoration: none; display: block; padding: 10px 0; border-bottom: 1px solid #1e293b; transition: 0.3s; }
+        .sidebar-link:hover { color: var(--primary); transform: translateX(10px); }
+
+        /* Footer Long-form Pillar Support */
+        footer { background: #000; color: #64748b; text-align: center; padding: 60px 20px; border-top: 1px solid #1e293b; margin-top: 40px; }
         footer a { color: #94a3b8; text-decoration: none; margin: 0 10px; font-size: 0.9rem; transition: 0.3s; }
         footer a:hover { color: var(--primary); }
+        .footer-desc { max-width: 800px; margin: 20px auto; font-size: 0.8rem; line-height: 1.6; }
+
+        @media (max-width: 768px) {
+            .main-layout { flex-direction: column; }
+            .article-grid { grid-template-columns: repeat(2, 1fr); }
+        }
     </style>
 </head>
 <body>
-    <nav style="background:#0f172a; padding:20px; text-align:center; border-bottom:1px solid #1e293b;">
-        <div class="logo" style="font-size:2rem; font-weight:900; color:var(--primary);">EARNSMART<span style="color:var(--secondary);">.PRO</span></div>
+    <nav>
+        <div class="logo">EARNSMART<span style="color:var(--secondary);">.AI</span></div>
+        
+        <div class="search-box">
+            <input type="text" placeholder="Search 2000+ words guides...">
+        </div>
+        <div class="cat-menu">
+            <a href="index.html">Home</a>
+            <a href="#guides">Earning Guides</a>
+            <a href="about.html">AI Side Hustles</a>
+            <a href="contact.html">Support</a>
+        </div>
     </nav>
 
     <div class="main-layout container">
         <div class="content-area">
-            <a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96" target="_blank" class="hero-smart-link">🔥 JOIN VIP EARNING GROUP - $100/DAY STRATEGY</a>
+            <a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96" target="_blank" class="hero-smart-link">
+                🚀 ACCESS VIP ADSTERRA PREMIUM REVENUE GUIDE 2026
+            </a>
 
-            <h2 class="section-title">All Earning Guides (1-30)</h2>
+            <h2 class="section-title" id="guides">All Earning Guides (1-30)</h2>
             <div class="article-grid">
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=200"><h4>Online Biz</h4><a href="blog1.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=200"><h4>Freelancing</h4><a href="blog2.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200"><h4>Digital Mkt</h4><a href="blog3.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200"><h4>Web Dev</h4><a href="blog4.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=200"><h4>Edu Tips</h4><a href="blog5.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200"><h4>Tech Guide</h4><a href="blog6.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=200"><h4>E-com</h4><a href="blog7.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200"><h4>Content</h4><a href="blog8.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=200"><h4>App Review</h4><a href="blog9.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=200"><h4>Social Media</h4><a href="blog10.html" class="read-more-btn">Read More</a></div>
+                <div class="mini-card" onclick="location.href='blog1.html'"><img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=200"><h4>AI Wealth Creation</h4></div>
+                <div class="mini-card" onclick="location.href='blog2.html'"><img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=200"><h4>Crypto Passive 2026</h4></div>
+                <div class="mini-card" onclick="location.href='blog3.html'"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=200"><h4>Affiliate Marketing</h4></div>
+                <div class="mini-card" onclick="location.href='blog4.html'"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200"><h4>TikTok Automation</h4></div>
+                <div class="mini-card" onclick="location.href='blog5.html'"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=200"><h4>Online Freelancing</h4></div>
+                <div class="mini-card" onclick="location.href='blog6.html'"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200"><h4>Web Development</h4></div>
+                <div class="mini-card" onclick="location.href='blog7.html'"><img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=200"><h4>E-commerce Profit</h4></div>
+                <div class="mini-card" onclick="location.href='blog8.html'"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=200"><h4>Digital Marketing</h4></div>
+                <div class="mini-card" onclick="location.href='blog9.html'"><img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=200"><h4>Social Media Ads</h4></div>
+                <div class="mini-card" onclick="location.href='blog10.html'"><img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=200"><h4>Instagram Growth</h4></div>
 
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=200"><h4>Crypto</h4><a href="blog11.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1454165833767-027ffea9e78b?w=200"><h4>Analysis</h4><a href="blog12.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=200"><h4>Software</h4><a href="blog13.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=200"><h4>Cyber</h4><a href="blog14.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=200"><h4>SEO</h4><a href="blog15.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1572044162444-ad60f128bde2?w=200"><h4>Design</h4><a href="blog16.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200"><h4>CPA Mkt</h4><a href="blog17.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200"><h4>Amazon</h4><a href="blog18.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=200"><h4>TikTok</h4><a href="blog19.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200"><h4>AI Prompt</h4><a href="blog20.html" class="read-more-btn">Read More</a></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=200"><h4>Stock Investment</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1454165833767-027ffea9e78b?w=200"><h4>Virtual Assistant</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=200"><h4>App Development</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=200"><h4>Cyber Security</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=200"><h4>Video Editing</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1572044162444-ad60f128bde2?w=200"><h4>Graphic Design</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=200"><h4>Dropshipping</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200"><h4>Ebook Writing</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=200"><h4>Saas Business</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200"><h4>AI Integration</h4></div>
 
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200"><h4>YT Auto</h4><a href="blog21.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=200"><h4>Shortener</h4><a href="blog22.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200"><h4>Content Flip</h4><a href="blog23.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?w=200"><h4>Mining</h4><a href="blog24.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=200"><h4>Side Hustle</h4><a href="blog25.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=200"><h4>AI Agency</h4><a href="blog26.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200"><h4>Telegram</h4><a href="blog27.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=200"><h4>TikTok USA</h4><a href="blog28.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611974714024-46202e0bb183?w=200"><h4>Stock Bot</h4><a href="blog29.html" class="read-more-btn">Read More</a></div>
-                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611162616475-46b635cbca86?w=200"><h4>Pinterest</h4><a href="blog30.html" class="read-more-btn">Read More</a></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200"><h4>UI/UX Mastery</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=200"><h4>Payment Gateways</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=200"><h4>Automation Tools</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1516245834210-c4c142787335?w=200"><h4>Forex Trading</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=200"><h4>YouTube Cashcow</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=200"><h4>Voiceover AI</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200"><h4>Nft Flipping</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611605698335-8b1569810432?w=200"><h4>Remote SEO</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611974714024-46202e0bb183?w=200"><h4>Stock Market Bot</h4></div>
+                <div class="mini-card"><img src="https://images.unsplash.com/photo-1611162616475-46b635cbca86?w=200"><h4>Gaming Stream</h4></div>
             </div>
         </div>
 
         <div class="sidebar">
-            <h3 style="color:var(--primary);">Quick Navigation</h3>
-            <a href="blog28.html" class="sidebar-link">USA TikTok Guide</a>
-            <a href="blog27.html" class="sidebar-link">Telegram Bots</a>
-            <a href="blog30.html" class="sidebar-link">Pinterest Traffic</a>
-            <a href="blog29.html" class="sidebar-link">Stock Market Bot</a>
-            
+            <h3 style="color:var(--primary);">Pillar Content</h3>
+            <a href="blog28.html" class="sidebar-link">USA TikTok Mastery Guide</a>
+            <a href="blog27.html" class="sidebar-link">Telegram Bots Earning</a>
+            <a href="blog30.html" class="sidebar-link">Pinterest Traffic Secrets</a>
+            <a href="blog29.html" class="sidebar-link">AI Trading Bots 2026</a>
+
             <h3 style="color:var(--secondary); margin-top:25px;">VIP Support</h3>
-            <p style="font-size:0.85rem;">Need custom AI setup for UK/USA? Contact us now.</p>
-            <a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96" target="_blank" style="color:var(--gold); font-weight:bold; text-decoration:none;">⚡ Live Masterclass</a>
+            <p style="font-size:0.85rem;">Need custom AI setup for UK/USA? Contact us now for exclusive consultation.</p>
+            <a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: bold;">[ Get Started ]</a>
         </div>
     </div>
 
-    <footer style="background:#000; color:#64748b; text-align:center; padding:40px; border-top:1px solid #1e293b; margin-top:50px;">
+    <footer>
         <div style="margin-bottom: 20px;">
-            <a href="about.html">About Us</a> | 
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="contact.html">Contact Us</a> |
+            <a href="sitemap.xml">Sitemap</a>
         </div>
-        <p>&copy; 2025 EarnSmart Global Portal | Secured by Cloudflare</p>
+        <div class="footer-desc">
+            EarnSmart Global Portal is your number one source for long-form, 2000+ words guides on digital entrepreneurship. We specialize in AI Side Hustles, TikTok Automation, and Crypto Passive Income strategies for 2026.
+        </div>
+        <p>&copy; 2025 EarnSmart Global Portal | Secured by Cloudflare | Managed by AI</p>
     </footer>
 
     <script type='text/javascript' src='//pl28282752.effectivegatecpm.com/ba/73/ea/ba73ea6d4cc4e7b1ca664d63c70dc7e7.js'></script>
