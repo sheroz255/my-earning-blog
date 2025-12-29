@@ -90,6 +90,10 @@ for i, (title, img) in enumerate(zip(titles, images), 1):
 index_content += """
     </div>
     <footer>&copy; 2025 EarnSmart Global Authority | Verified Content</footer>
+        <p>&copy; 2025 EarnSmart Global Authority</p>
+        <a href="about.html" style="color:#64748b; margin:0 10px;">About</a> | 
+        <a href="contact.html" style="color:#64748b; margin:0 10px;">Contact</a> | 
+        <a href="privacy.html" style="color:#64748b; margin:0 10px;">Privacy Policy</a>
     <script>
         function filterBlogs() {
             let input = document.getElementById('searchBar').value.toLowerCase();
