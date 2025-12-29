@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sheroz255.github.io/my-earning-blog/sitemap.xml
+
