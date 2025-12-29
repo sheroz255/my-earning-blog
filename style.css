@@ -1,30 +1,45 @@
-/* General Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-body { background-color: #f0f2f5; color: #333; transition: 0.3s; overflow-x: hidden; } /* Horizontal scroll khatam */
+/* Universal Reset */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+}
 
-/* 1. Animated & Glowing Logo */
+body { 
+    background-color: #f0f2f5; 
+    color: #333; 
+    transition: 0.3s; 
+    overflow-x: hidden; 
+    perspective: 1000px; /* 3D depth ke liye zaroori hai */
+}
+
+/* 1. 3D Animated & Glowing Logo */
 nav {
-    background: #000;
+    background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #2ed573;
 }
 
 .logo {
     font-size: 32px;
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     background: linear-gradient(90deg, #2ed573, #1e90ff, #ff4757, #2ed573);
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: rainbow-glow 5s linear infinite;
     display: inline-block;
-    filter: drop-shadow(0 0 10px rgba(46, 213, 115, 0.5));
+    filter: drop-shadow(0 5px 15px rgba(46, 213, 115, 0.6));
+    transform: translateZ(50px); /* 3D pop effect */
 }
 
 @keyframes rainbow-glow {
@@ -32,80 +47,122 @@ nav {
     100% { background-position: 100%; }
 }
 
-/* 2. Layout Fix (Strict Alignment) */
+/* 2. Layout & 3D Container */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
+    transform-style: preserve-3d;
 }
 
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 30px;
+    padding: 20px 0;
 }
 
-/* 3. Image Fix (Taake aadhi screen se bahar na jaye) */
+/* 3. Image 3D Pop */
 img {
     max-width: 100%;
     height: auto;
     display: block;
     border-radius: 12px;
+    transition: transform 0.5s ease;
 }
 
 .mini-card img {
     width: 100% !important;
     height: 220px !important;
-    object-fit: cover; /* Image kategi nahi, box mein fit rahegi */
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
-/* 4. Cards & Hover Effects */
+/* 4. Real 3D Cards & Hover Effects */
 .card, .mini-card {
     background: white;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    transition: 0.3s ease;
-    border: 1px solid #eee;
-    overflow: hidden; /* Content bahar nahi nikalne dega */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1), 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255,255,255,0.3);
+    overflow: hidden;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
 }
 
 .mini-card:hover {
-    transform: translateY(-10px);
+    /* 3D Tilt aur Lift effect */
+    transform: translateY(-15px) rotateX(5deg) rotateY(-5deg);
     border-color: #2ed573;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: -10px 20px 40px rgba(0,0,0,0.15);
 }
 
-/* 5. Glowing Home Button */
+/* Hover par image thodi bahar niklegi */
+.mini-card:hover img {
+    transform: scale(1.08) translateZ(20px);
+}
+
+/* 5. Glowing 3D Home Button */
 .back-btn-container {
     text-align: center;
-    margin: 40px 0;
-    padding: 25px;
+    margin: 60px 0;
+    padding: 40px;
     background: #fff;
-    border-radius: 20px;
+    border-radius: 30px;
     border: 2px dashed #2ed573;
+    box-shadow: inset 0 0 20px rgba(46, 213, 115, 0.1);
+    transform: translateZ(20px);
 }
 
 .btn-home {
     background: linear-gradient(135deg, #2ed573, #1fb956);
     color: white !important;
-    padding: 15px 40px;
+    padding: 18px 50px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 50px;
     display: inline-block;
-    box-shadow: 0 8px 15px rgba(46, 213, 115, 0.3);
-    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(46, 213, 115, 0.4);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    top: 0;
 }
 
 .btn-home:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(46, 213, 115, 0.5);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 15px 35px rgba(46, 213, 115, 0.6);
+    letter-spacing: 1px;
 }
 
-/* Footer */
-footer { background: #1e272e; color: #ffffff; padding: 30px; text-align: center; margin-top: 50px; }
-footer a { color: #2ed573; text-decoration: none; font-weight: 600; margin: 0 10px; }
+.btn-home:active {
+    transform: translateY(2px);
+}
+
+/* Footer with depth */
+footer { 
+    background: #1e272e; 
+    color: #ffffff; 
+    padding: 50px 20px; 
+    text-align: center; 
+    margin-top: 80px; 
+    border-top: 5px solid #2ed573;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.2);
+}
+
+footer a { 
+    color: #2ed573; 
+    text-decoration: none; 
+    font-weight: 600; 
+    margin: 0 15px; 
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px #2ed573;
+    color: #fff;
+}
 
