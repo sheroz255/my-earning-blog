@@ -1,85 +1,96 @@
 import os
 
-# Har blog ke liye unique paragraphs ka database
-blog_data = {
-    "TikTok Automation Mastery": {
-        "intro": "TikTok automation is the art of using AI tools to create, edit, and post content without manual intervention.",
-        "body": "In 2026, the TikTok algorithm prioritizes watch time and shareability. To succeed, you must use tools like CapCut AI for bulk editing and Python scripts for auto-uploading. Focus on high-retention niches like 'Daily Motivation' or 'Tech News'. This guide covers API integration and shadowban prevention strategies.",
-        "tips": "Always use high-quality 9:16 vertical videos and trending audio from the TikTok Creative Center."
-    },
-    "AI Crypto Trading Strategies": {
-        "intro": "Automated crypto trading leverages machine learning to predict market movements and execute trades in milliseconds.",
-        "body": "Using Python-based bots on exchanges like Binance or OKX allows for 24/7 market monitoring. The strategy involves setting up grid trading bots and RSI-based scalping algorithms. We explore how to backtest your strategy using historical data to ensure maximum ROI while managing risk parameters.",
-        "tips": "Never share your Private Keys and always use API restrictions for withdrawal security."
-    }
-    # (Isi tarah baaki 28 topics ka data bhi system generate karega)
-}
-
-titles = [
-    "TikTok Automation Mastery", "AI Crypto Trading Strategies", "AI Side Hustles",
-    "Digital Assets Investment", "Modern Freelance Growth", "Web Development 2026",
-    "E-commerce Scaling Secrets", "Social Media Algorithms", "YouTube Cashcow Channels",
-    "Instagram Monetization", "Stock Market Analysis", "Virtual Assistant Systems",
-    "App Development Business", "Cyber Security Training", "Pro Video Editing Skills",
-    "Graphic Design Innovation", "Advanced Dropshipping", "Ebook Publishing Profits",
-    "SaaS Business Model", "AI Prompt Engineering", "UI/UX Design Standards",
-    "Global Payment Gateways", "Python Automation Bots", "Gaming Revenue Streams",
-    "High CPM Ad Networks", "AI Voiceover Services", "NFT Market Evolution",
-    "Remote SEO Consulting", "Day Trading Techniques", "Pinterest Traffic Secrets"
+# Titles and unique descriptions for 30 blogs
+data = [
+    ("TikTok Automation Mastery", "Explore advanced AI video tools and cloud-based scheduling to build viral TikTok channels in 2026. Automation allows for multi-niche scaling without manual effort."),
+    ("AI Crypto Trading Bots", "Learn to set up Python-based trading bots that interact with exchange APIs using RSI and MACD indicators for 24/7 automated trading."),
+    ("AI Side Hustles 2026", "Discover top AI-driven side hustles generating over $5000 monthly, from specialized prompt engineering to automated content agencies."),
+    ("Digital Real Estate", "Build long-term wealth by investing in high-authority domains and established blogs. Learn flipping strategies for digital assets."),
+    ("Freelance Success Guide", "Master high-ticket client acquisition on LinkedIn and Upwork with professional proposal writing and personal branding."),
+    ("Web Development Strategy", "Dominate the 2026 landscape with Next.js and Tailwind CSS for faster, secure, and SEO-friendly web applications."),
+    ("E-commerce Profit Plan", "Enhance store revenue using AI-driven customer retention strategies and highly personalized marketing funnels."),
+    ("Social Media Algorithms", "A deep dive into 2026 ranking signals for Instagram and X. Learn how to optimize for saves and shares."),
+    ("YouTube Cashcow Secrets", "Run high-revenue YouTube channels without showing your face using AI voiceovers and stock footage automation."),
+    ("Instagram Wealth Strategy", "Monetize Instagram through exclusive digital products and subscription models for dedicated followers."),
+    ("Stock Market Mastery", "Utilize AI tools to analyze sentiment data and quarterly reports for informed decision-making in the 2026 market."),
+    ("Virtual Assistant Training", "Scale your career as a remote executive assistant using tools like Slack, Notion, and AI managers."),
+    ("App Business Secrets", "Launch no-code mobile apps that solve specific utility problems in the growing app economy."),
+    ("Cyber Security Expert", "Build a career in ethical hacking and cloud security consulting to protect global digital footprints."),
+    ("Video Editing Course", "Learn professional editing with Premiere Pro and CapCut to provide services for top-tier creators."),
+    ("Graphic Design Trends", "Stay ahead with minimalist and AI-augmented design styles dominating the 2026 creative industry."),
+    ("Advanced Dropshipping", "Focus on high-quality suppliers and branded products for better margins in the 2026 dropshipping model."),
+    ("Ebook Selling Profits", "Write and market your books on Amazon KDP using AI for research, formatting, and global distribution."),
+    ("SaaS Startup Guide", "Micro-SaaS development is the ultimate passive income. Solve one specific problem and scale your software."),
+    ("AI Prompt Engineering", "Master complex prompting techniques to deliver professional-grade results for corporate AI implementations."),
+    ("UI/UX Design Standards", "Focus on accessibility and fast conversion rates to build modern, user-centric interfaces."),
+    ("Payment Gateways 2026", "Configure Stripe, PayPal, and Crypto payment rails for a global business from any location."),
+    ("Python Automation Bots", "Develop and sell custom Python scripts that automate complex business workflows and daily tasks."),
+    ("Gaming Revenue Streams", "Monetize gaming through affiliate marketing, professional coaching, and digital asset trading."),
+    ("Adsterra Revenue Secrets", "Optimize your website ad placements and traffic routing to maximize CPM with Adsterra networks."),
+    ("Voiceover AI Tools", "Use natural AI voices for commercials and audiobooks to significantly reduce production costs."),
+    ("NFT Market Evolution", "Transition from digital art to utility-based NFTs for memberships and real-world asset tokenization."),
+    ("Remote SEO Consulting", "Offer high-value SEO audits and backlink strategies to international firms from your home."),
+    ("Day Trading Techniques", "Analyze price action and candlestick patterns for consistent daily profits in Forex and Stocks."),
+    ("Pinterest Traffic Secrets", "Drive massive viral traffic to your blog using Pinterest's visual search engine optimization.")
 ]
 
 template = """<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="google-site-verification" content="X4FP-y7MQmptGMN" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPNNLFJ22K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-RPNNLFJ22K');
+    </script>
+
+    <script type="text/javascript" src="https://pl28282752.effectivegatecpm.com/ba/73/ea/ba73ea6d4cc4e7b1ca664d63c70dc7e7.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{title} - Comprehensive Guide 2026</title>
+    <title>{title} | VIP Authority Guide 2026</title>
     <style>
-        body {{ font-family: 'Arial', sans-serif; line-height: 1.8; color: #333; background: #f4f7f6; padding: 0; margin: 0; }}
-        .header {{ background: #1a202c; color: white; padding: 60px 20px; text-align: center; }}
-        .content {{ max-width: 900px; margin: -40px auto 40px; background: white; padding: 50px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }}
-        h1 {{ font-size: 2.5rem; margin-bottom: 10px; }}
-        h2 {{ color: #2c5282; margin-top: 40px; border-left: 5px solid #2c5282; padding-left: 15px; }}
-        p {{ margin-bottom: 25px; text-align: justify; font-size: 1.1rem; }}
-        .cta-box {{ background: #ebf8ff; border: 1px solid #bee3f8; padding: 25px; border-radius: 8px; margin: 30px 0; }}
-        .btn {{ display: inline-block; background: #2b6cb0; color: white !important; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }}
+        body {{ background: #0f172a; color: #cbd5e1; font-family: 'Segoe UI', sans-serif; line-height: 1.8; padding: 20px; }}
+        .card {{ max-width: 850px; margin: auto; background: #1e293b; padding: 40px; border-radius: 12px; border-top: 4px solid #38bdf8; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }}
+        h1 {{ color: #f8fafc; font-size: 2.5rem; margin-bottom: 20px; }}
+        h2 {{ color: #38bdf8; margin-top: 30px; border-bottom: 1px solid #334155; padding-bottom: 10px; }}
+        p {{ font-size: 1.15rem; margin-bottom: 25px; text-align: justify; }}
+        .cta-btn {{ display: block; background: linear-gradient(90deg, #38bdf8, #818cf8); color: #0f172a !important; padding: 20px; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 30px 0; font-size: 1.3rem; transition: 0.3s; }}
+        .cta-btn:hover {{ opacity: 0.9; transform: translateY(-2px); }}
+        footer {{ text-align: center; margin-top: 50px; font-size: 0.9rem; color: #64748b; border-top: 1px solid #334155; padding-top: 20px; }}
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="card">
+        <a href="index.html" style="color:#38bdf8; text-decoration: none; font-weight: bold;">← BACK TO PORTAL</a>
         <h1>{title}</h1>
-        <p>Last Updated: December 2025 | 15 Minute Read</p>
-    </div>
-    <div class="content">
-        <a href="index.html">← Back to Home</a>
         
-        <h2>Introduction to {title}</h2>
-        <p>In the evolving digital landscape of 2026, <strong>{title}</strong> has become a cornerstone for digital entrepreneurs. Unlike traditional methods, this approach focuses on scalability and efficiency. Many beginners fail because they lack a structured roadmap, but this guide aims to provide exactly that.</p>
+        <p>{content}</p>
 
-        <div class="cta-box">
-            <h3>Special Resource:</h3>
-            <p>Access our premium dashboard for real-time tracking and tools related to this niche.</p>
-            <a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96" class="btn">Get Started Now</a>
-        </div>
+        <a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96" class="cta-btn">ACTIVATE YOUR REVENUE DASHBOARD NOW</a>
 
-        <h2>Core Principles and Implementation</h2>
-        <p>To master {title}, you must understand the underlying data structures. Market research indicates that users who implement automated workflows see a 60% increase in productivity. This involves setting up reliable cloud environments and integrating AI APIs to handle repetitive tasks. We recommend starting with a small-scale pilot project before full deployment.</p>
+        <h2>Comprehensive Strategy & Implementation</h2>
+        <p>Success in <strong>{title}</strong> requires a deep understanding of current market dynamics. In 2026, the integration of automated systems and AI has changed the rules of the game. Professionals who adapt quickly are seeing unprecedented growth in their digital assets. Our research indicates that a structured approach—focusing on data-driven decisions rather than guesswork—is the only way to remain competitive.</p>
+        
+        <p>By following the insights provided in our VIP resource area, you will gain access to tools that simplify the most complex aspects of this niche. This is not just about short-term gains; it's about building a sustainable, long-term business model that works for you even while you sleep.</p>
 
-        <img src="https://images.unsplash.com/photo-1551288049-bbbda536639a?auto=format&fit=crop&w=800" alt="Analysis" style="width:100%; border-radius:8px; margin:20px 0;">
+        <a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96" class="cta-btn">DOWNLOAD THE 2026 SUCCESS BLUEPRINT (FREE ACCESS)</a>
 
-        <h2>Advanced Strategies for Success</h2>
-        <p>The real secret to high earnings in this domain is consistent optimization. By analyzing your performance metrics weekly, you can identify bottlenecks. Whether it's adjusting your Python scripts or refining your social media triggers, every small change contributes to a larger growth trajectory.</p>
-
-        <h2>Conclusion</h2>
-        <p>We hope this detailed analysis of <strong>{title}</strong> provides you with the clarity needed to start your journey. Remember, the digital economy rewards those who take action and stay persistent. For more updates, keep following our portal.</p>
+        <footer>
+            &copy; 2025 EarnSmart Global Authority | Verified Professional Content
+        </footer>
     </div>
 </body>
 </html>
 """
 
-for i, title in enumerate(titles, 1):
+for i, (title, content) in enumerate(data, 1):
     file_name = f"blog{i}.html"
     with open(file_name, "w") as f:
-        f.write(template.format(title=title))
-    print(f"AdSense Ready Blog Created: {file_name}")
+        f.write(template.format(title=title, content=content))
+    print(f"Verified, Ads Integrated & Created: {file_name}")
+	
 
