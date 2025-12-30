@@ -1,6 +1,5 @@
 import os
 
-# 100 Titles (Ensure this list matches your creator.py titles exactly)
 titles = [
     "TikTok Automation Mastery", "AI Crypto Trading Bots", "AI Side Hustles 2026", "Digital Real Estate", 
     "Freelance Success Guide", "Web Development Strategy", "E-commerce Profit Plan", "Social Media Algorithms", 
@@ -29,15 +28,6 @@ titles = [
     "Exit Strategy Planning", "Global Tax Optimization", "Legal Tech Evolution", "AI Ethics for Business"
 ]
 
-images = [
-    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500",
-    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500",
-    "https://images.unsplash.com/photo-1551288049-bbbda536639a?w=500",
-    "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=500",
-    "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500",
-    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500"
-]
-
 index_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,59 +36,58 @@ index_content = """<!DOCTYPE html>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-RPNNLFJ22K');</script>
     <script type="text/javascript" src="https://pl28282752.effectivegatecpm.com/ba/73/ea/ba73ea6d4cc4e7b1ca664d63c70dc7e7.js"></script>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EarnSmart | Global 2026 Authority Portal</title>
+    <title>EarnSmart | Global Authority 2026</title>
     <style>
-        :root {{ --primary: #38bdf8; --bg: #020617; --card-bg: #1e293b; }}
-        body {{ background: var(--bg); color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; }}
-        nav {{ background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); padding: 20px 50px; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #334155; }}
-        .nav-links a {{ color: white; text-decoration: none; margin-left: 20px; font-weight: 600; }}
-        .hero {{ padding: 120px 20px; text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #020617 100%); }}
-        #searchBar {{ width: 80%; max-width: 600px; padding: 18px 30px; border-radius: 50px; border: 2px solid var(--primary); background: #0f172a; color: white; font-size: 1.2rem; outline: none; margin-top: 30px; }}
-        .grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 40px; max-width: 1400px; margin: auto; }}
-        .card {{ background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid #334155; transition: 0.4s; text-decoration: none; color: inherit; }}
-        .card:hover {{ transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2); }}
-        .card img {{ width: 100%; height: 200px; object-fit: cover; }}
-        .card-body {{ padding: 25px; }}
-        .card h3 {{ color: var(--primary); margin: 0 0 10px 0; font-size: 1.4rem; }}
-        footer {{ text-align: center; padding: 60px; border-top: 1px solid #334155; color: #64748b; }}
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+        :root {{ --primary: #38bdf8; --bg: #020617; --surface: #0f172a; }}
+        body {{ background: var(--bg); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; }}
+        nav {{ background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(10px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #1e293b; }}
+        .logo {{ font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; letter-spacing: -1px; }}
+        .nav-links a {{ color: #94a3b8; text-decoration: none; margin-left: 20px; font-weight: 600; font-size: 0.9rem; }}
+        .hero {{ padding: 100px 5%; text-align: center; background: radial-gradient(circle at 50% 50%, #1e293b 0%, #020617 100%); }}
+        h1 {{ font-size: clamp(2.5rem, 8vw, 4rem); margin-bottom: 15px; letter-spacing: -2px; }}
+        .search-box {{ width: 100%; max-width: 600px; padding: 15px 25px; border-radius: 12px; border: 1px solid #334155; background: var(--surface); color: white; font-size: 1rem; margin-top: 30px; outline: none; }}
+        .grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; padding: 50px 5%; }}
+        .card {{ background: var(--surface); border-radius: 16px; overflow: hidden; border: 1px solid #1e293b; transition: 0.3s; text-decoration: none; color: inherit; }}
+        .card:hover {{ transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 15px 30px rgba(0,0,0,0.4); }}
+        .card img {{ width: 100%; height: 180px; object-fit: cover; }}
+        .card-body {{ padding: 20px; }}
+        .card h3 {{ color: var(--primary); margin: 0 0 10px 0; font-size: 1.2rem; }}
+        .card p {{ color: #94a3b8; font-size: 0.85rem; line-height: 1.5; }}
+        footer {{ text-align: center; padding: 50px; border-top: 1px solid #1e293b; color: #475569; }}
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" style="color:var(--primary); font-size:1.6rem; font-weight:900; text-decoration:none;">EARNSMART</a>
+        <a href="index.html" class="logo">EARNSMART<span style="color:#fff">.</span></a>
         <div class="nav-links">
-            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="privacy.html">Privacy</a>
         </div>
     </nav>
     <div class="hero">
-        <h1>100+ Premium Wealth Blueprints</h1>
-        <p>Your Automated Gateway to the 2026 Digital Economy</p>
-        <input type="text" id="searchBar" placeholder="Search 100+ guides..." onkeyup="filterBlogs()">
+        <h1>Global Wealth Intelligence</h1>
+        <p style="color:#94a3b8; font-size:1.2rem;">Premium automation blueprints for the 2026 digital era.</p>
+        <input type="text" id="searchBar" class="search-box" placeholder="Search 100+ guides..." onkeyup="filterBlogs()">
     </div>
     <div class="grid" id="blogGrid">
 """
 
 for i, title in enumerate(titles, 1):
-    img = images[i % 6]
+    kw = title.replace(" ", ",").lower()
     index_content += f"""
         <a href="blog{i}.html" class="card">
-            <img src="{img}" alt="{title}">
+            <img src="https://source.unsplash.com/400x250/?{kw}" alt="{title}">
             <div class="card-body">
                 <h3>{title}</h3>
-                <p>Comprehensive 2000+ word expert analysis and automation roadmap.</p>
+                <p>Access the exclusive 2026 masterclass on {title} with automated workflows.</p>
             </div>
         </a>"""
 
 index_content += """
     </div>
-    <footer>
-        <p>&copy; 2025-2026 EarnSmart Global Authority</p>
-        <a href="privacy.html" style="color:#64748b; text-decoration:none;">Privacy Policy</a> | 
-        <a href="about.html" style="color:#64748b; text-decoration:none;">About Us</a>
-    </footer>
+    <footer>&copy; 2025 EarnSmart Authority | High-Fidelity Content Hub</footer>
     <script>
         function filterBlogs() {
             let input = document.getElementById('searchBar').value.toLowerCase();
@@ -115,5 +104,5 @@ index_content += """
 
 with open("index.html", "w") as f:
     f.write(index_content)
-print("✔ index.html updated with 100 Pro Cards!")
+print("✔ index.html updated with Premium UI!")
 
