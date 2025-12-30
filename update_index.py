@@ -1,33 +1,41 @@
+import os
+
+# 100 Titles (Ensure this list matches your creator.py titles exactly)
 titles = [
-    "TikTok Automation Mastery", "AI Crypto Trading Bots", "AI Side Hustles 2026",
-    "Digital Real Estate", "Freelance Success Guide", "Web Development Strategy",
-    "E-commerce Profit Plan", "Social Media Algorithms", "YouTube Cashcow Secrets",
-    "Instagram Wealth Strategy", "Stock Market Mastery", "Virtual Assistant Training",
-    "App Business Secrets", "Cyber Security Expert", "Video Editing Course",
-    "Graphic Design Trends", "Advanced Dropshipping", "Ebook Selling Profits",
-    "SaaS Startup Guide", "AI Prompt Engineering", "UI/UX Design Standards",
-    "Global Payment Gateways", "Python Automation Bots", "Gaming Revenue Streams",
-    "Adsterra Revenue Secrets", "Voiceover AI Tools", "NFT Market Evolution",
-    "Remote SEO Consulting", "Day Trading Techniques", "Pinterest Traffic Secrets"
+    "TikTok Automation Mastery", "AI Crypto Trading Bots", "AI Side Hustles 2026", "Digital Real Estate", 
+    "Freelance Success Guide", "Web Development Strategy", "E-commerce Profit Plan", "Social Media Algorithms", 
+    "YouTube Cashcow Secrets", "Instagram Wealth Strategy", "Stock Market Mastery", "Virtual Assistant Training", 
+    "App Business Secrets", "Cyber Security Expert", "Video Editing Course", "Graphic Design Trends", 
+    "Advanced Dropshipping", "Ebook Selling Profits", "SaaS Startup Guide", "AI Prompt Engineering", 
+    "UI/UX Design Standards", "Global Payment Gateways", "Python Automation Bots", "Gaming Revenue Streams", 
+    "Adsterra Revenue Secrets", "Voiceover AI Tools", "NFT Market Evolution", "Remote SEO Consulting", 
+    "Day Trading Techniques", "Pinterest Traffic Secrets", "CPA Marketing Hacks", "Email Marketing Funnels",
+    "Metaverse Business Models", "Cloud Computing Basics", "Podcasting for Profit", "Influencer Outreach",
+    "Data Analytics for Beginners", "High-Ticket Sales", "Domain Flipping Guide", "Copywriting for Conversions",
+    "Shopify SEO Mastery", "Amazon FBA Blueprint", "Google Ads Optimization", "Facebook Ads Scaling",
+    "LinkedIn Lead Gen", "Snapchat Marketing", "Telegram Bot Business", "Quora Traffic Engine",
+    "Software Testing Career", "Blockchain Architecture", "DeFi Yield Farming", "Smart Contract Audits",
+    "Real Estate Tokenization", "Wealth Management AI", "Credit Score Repair", "Personal Finance Hacks",
+    "Online Coaching Business", "Web3 Development", "Cyber Hygiene for Pros", "Remote Work Setup",
+    "Digital Nomad Lifestyle", "SaaS Growth Hacking", "Low-Code App Design", "Micro-SaaS Ideas",
+    "Subscription Box Business", "Print on Demand Profits", "Art Gallery NFTs", "Music Royalty Investing",
+    "Solar Energy Side Hustles", "EV Charging Station Business", "Vertical Farming Tech", "Space Economy Future",
+    "Quantum Computing Impact", "Biotech Investment Trends", "Cyber Security for Small Business", "Zero Trust Security",
+    "Content Strategy 2026", "Viral Marketing Psychology", "Branding for Startups", "Customer Retention AI",
+    "Logistics Automation", "Supply Chain Transparency", "Agile Project Management", "Remote Team Leadership",
+    "Public Speaking Skills", "Body Language for Sales", "Negotiation Strategies", "Mindset for Millionaires",
+    "Productivity Systems", "Deep Work Strategies", "Biohacking for Founders", "Sustainable Business Models",
+    "Social Impact Ventures", "Crowdfunding Success", "Angel Investing Basics", "VC Funding Roadmap",
+    "Exit Strategy Planning", "Global Tax Optimization", "Legal Tech Evolution", "AI Ethics for Business"
 ]
 
-# Random professional images matching the topics
 images = [
-    "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=500", "https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=500",
-    "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500", "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500",
-    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500", "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500",
-    "https://images.unsplash.com/photo-1556742044-3c52d6e88c62?w=500", "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=500",
-    "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=500", "https://images.unsplash.com/photo-1611267254323-4db7b39c732c?w=500",
-    "https://images.unsplash.com/photo-1611974714652-96594dc6be41?w=500", "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500",
-    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500", "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500",
-    "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=500", "https://images.unsplash.com/photo-1558655146-d09347e92766?w=500",
-    "https://images.unsplash.com/photo-1566576721346-d4a3b4eaad5b?w=500", "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500",
-    "https://images.unsplash.com/photo-1551288049-bbbda536639a?w=500", "https://images.unsplash.com/photo-1675271591211-126ad94e495d?w=500",
-    "https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?w=500", "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=500",
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500", "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500",
-    "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500", "https://images.unsplash.com/photo-1589254065878-42c9da997008?w=500",
-    "https://images.unsplash.com/photo-1621504450181-5d356f63d3cc?w=500", "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=500",
-    "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500", "https://images.unsplash.com/photo-1545235617-9465d2a55698?w=500"
+    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500",
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500",
+    "https://images.unsplash.com/photo-1551288049-bbbda536639a?w=500",
+    "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=500",
+    "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=500",
+    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500"
 ]
 
 index_content = """<!DOCTYPE html>
@@ -35,65 +43,62 @@ index_content = """<!DOCTYPE html>
 <head>
     <meta name="google-site-verification" content="X4FP-y7MQmptGMN" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RPNNLFJ22K"></script>
-    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RPNNLFJ22K');</script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-RPNNLFJ22K');</script>
     <script type="text/javascript" src="https://pl28282752.effectivegatecpm.com/ba/73/ea/ba73ea6d4cc4e7b1ca664d63c70dc7e7.js"></script>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EarnSmart | Premium 2026 Portal</title>
+    <title>EarnSmart | Global 2026 Authority Portal</title>
     <style>
-        :root { --primary: #38bdf8; --bg: #020617; --card-bg: #1e293b; }
-        body { background: var(--bg); color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
-        nav { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #334155; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-        .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; }
-        .hero { padding: 100px 20px; text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #020617 100%); }
-        .search-container { margin: 30px auto; max-width: 600px; }
-        #searchBar { width: 100%; padding: 15px 25px; border-radius: 30px; border: 1px solid var(--primary); background: #0f172a; color: white; font-size: 1.1rem; outline: none; box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px; max-width: 1300px; margin: auto; }
-        .card { background: var(--card-bg); border-radius: 15px; overflow: hidden; border: 1px solid #334155; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); text-decoration: none; color: inherit; position: relative; }
-        .card:hover { transform: scale(1.05) rotateY(10deg); border-color: var(--primary); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .card h3 { color: var(--primary); margin: 0 0 10px 0; }
-        .card p { color: #94a3b8; font-size: 0.9rem; }
-        footer { text-align: center; padding: 50px; border-top: 1px solid #334155; color: #64748b; }
+        :root {{ --primary: #38bdf8; --bg: #020617; --card-bg: #1e293b; }}
+        body {{ background: var(--bg); color: #f8fafc; font-family: 'Inter', sans-serif; margin: 0; }}
+        nav {{ background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); padding: 20px 50px; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #334155; }}
+        .nav-links a {{ color: white; text-decoration: none; margin-left: 20px; font-weight: 600; }}
+        .hero {{ padding: 120px 20px; text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #020617 100%); }}
+        #searchBar {{ width: 80%; max-width: 600px; padding: 18px 30px; border-radius: 50px; border: 2px solid var(--primary); background: #0f172a; color: white; font-size: 1.2rem; outline: none; margin-top: 30px; }}
+        .grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 40px; max-width: 1400px; margin: auto; }}
+        .card {{ background: var(--card-bg); border-radius: 20px; overflow: hidden; border: 1px solid #334155; transition: 0.4s; text-decoration: none; color: inherit; }}
+        .card:hover {{ transform: translateY(-10px); border-color: var(--primary); box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2); }}
+        .card img {{ width: 100%; height: 200px; object-fit: cover; }}
+        .card-body {{ padding: 25px; }}
+        .card h3 {{ color: var(--primary); margin: 0 0 10px 0; font-size: 1.4rem; }}
+        footer {{ text-align: center; padding: 60px; border-top: 1px solid #334155; color: #64748b; }}
     </style>
 </head>
 <body>
     <nav>
-        <a href="#" class="logo">EARNSMART 2026</a>
+        <a href="index.html" style="color:var(--primary); font-size:1.6rem; font-weight:900; text-decoration:none;">EARNSMART</a>
         <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Tools</a>
-            <a href="#">VIP Access</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
         </div>
     </nav>
     <div class="hero">
-        <h1>Global Wealth Intelligence</h1>
-        <p>Premium automation guides for the modern entrepreneur</p>
-        <div class="search-container">
-            <input type="text" id="searchBar" placeholder="Search for a guide (e.g. TikTok)..." onkeyup="filterBlogs()">
-        </div>
+        <h1>100+ Premium Wealth Blueprints</h1>
+        <p>Your Automated Gateway to the 2026 Digital Economy</p>
+        <input type="text" id="searchBar" placeholder="Search 100+ guides..." onkeyup="filterBlogs()">
     </div>
     <div class="grid" id="blogGrid">
 """
 
-for i, (title, img) in enumerate(zip(titles, images), 1):
+for i, title in enumerate(titles, 1):
+    img = images[i % 6]
     index_content += f"""
         <a href="blog{i}.html" class="card">
             <img src="{img}" alt="{title}">
-            <div class="card-content">
+            <div class="card-body">
                 <h3>{title}</h3>
-                <p>Exclusive 2026 blueprint and automation strategies for professional scaling.</p>
+                <p>Comprehensive 2000+ word expert analysis and automation roadmap.</p>
             </div>
         </a>"""
 
 index_content += """
     </div>
-    <footer>&copy; 2025 EarnSmart Global Authority | Verified Content</footer>
-        <p>&copy; 2025 EarnSmart Global Authority</p>
-        <a href="about.html" style="color:#64748b; margin:0 10px;">About</a> | 
-        <a href="contact.html" style="color:#64748b; margin:0 10px;">Contact</a> | 
-        <a href="privacy.html" style="color:#64748b; margin:0 10px;">Privacy Policy</a>
+    <footer>
+        <p>&copy; 2025-2026 EarnSmart Global Authority</p>
+        <a href="privacy.html" style="color:#64748b; text-decoration:none;">Privacy Policy</a> | 
+        <a href="about.html" style="color:#64748b; text-decoration:none;">About Us</a>
+    </footer>
     <script>
         function filterBlogs() {
             let input = document.getElementById('searchBar').value.toLowerCase();
@@ -110,5 +115,5 @@ index_content += """
 
 with open("index.html", "w") as f:
     f.write(index_content)
-print("✔ index.html updated with 3D effects, Search, and Images!")
+print("✔ index.html updated with 100 Pro Cards!")
 
