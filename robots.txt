@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /my-earning-blog/
+
+# Sitemap ka sahi aur mukammal link
 Sitemap: https://sheroz255.github.io/my-earning-blog/sitemap.xml
 
