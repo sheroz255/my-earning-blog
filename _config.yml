@@ -1,0 +1,12 @@
+title: EarnSmart
+url: "https://sheroz255.github.io"
+baseurl: "/my-earning-blog"
+description: "Global Wealth Intelligence & AI Tools 2026"
+
+# Ye line sitemap ko automatic banaye gi
+plugins:
+  - jekyll-sitemap
+
+# Settings
+markdown: kramdown
+theme: minima
