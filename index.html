@@ -20,10 +20,10 @@ layout: default
     </script>
 
     <script src="https://pl28413419.effectivegatecpm.com/e9/39/ef/e939ef3ad672e8598581f8d2f9126109.js"></script>
-    
+
     <style>
         :root { --primary: #38bdf8; --secondary: #ff0050; --dark: #020617; --card-bg: #0f172a; --accent: #a855f7; }
-        body { background: var(--dark); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; overflow-x: hidden;}
+        body { background: var(--dark); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
 
         nav { background: var(--card-bg); padding: 15px; border-bottom: 2px solid #1e293b; text-align: center; }
         .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; letter-spacing: 2px; }
@@ -89,7 +89,7 @@ layout: default
     <div class="grid" id="blogGrid">
         {% for post in site.posts %}
         <a href="{{ post.url | relative_url }}" class="card">
-            {% if post.url contains 'youtube-automation' %}
+            {% if post.title contains "YouTube" %}
                 <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=500&q=60" alt="{{ post.title }}">
             {% else %}
                 <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=500&q=60" alt="{{ post.title }}">
