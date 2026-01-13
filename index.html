@@ -24,20 +24,15 @@ layout: default
     <style>
         :root { --primary: #38bdf8; --secondary: #ff0050; --dark: #020617; --card-bg: #0f172a; --accent: #a855f7; }
         body { background: var(--dark); color: white; font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
-
         nav { background: var(--card-bg); padding: 15px; border-bottom: 2px solid #1e293b; text-align: center; }
         .logo { font-size: 1.8rem; font-weight: 900; color: var(--primary); text-decoration: none; letter-spacing: 2px; }
         .nav-links { margin-top: 10px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
         .nav-links a { color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 500; }
-
         .hero { padding: 40px 20px; text-align: center; background: radial-gradient(circle, #1e293b 0%, #020617 100%); }
         .hero h1 { font-size: calc(1.8rem + 1vw); margin-bottom: 10px; }
-
         #myInput { width: 90%; max-width: 500px; padding: 12px 20px; border-radius: 30px; border: 1px solid var(--primary); background: #1e293b; color: white; outline: none; }
-
         .tool-banner { background: linear-gradient(135deg, var(--primary), var(--accent)); padding: 30px; border-radius: 20px; margin: 20px; text-align: center; }
         .btn-tool { background: white; color: var(--dark); padding: 12px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; }
-
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; padding: 20px; }
         .card { background: var(--card-bg); border-radius: 15px; border: 1px solid #1e293b; overflow: hidden; text-decoration: none; display: flex; flex-direction: column; transition: 0.3s; }
         .card:hover { transform: translateY(-5px); border-color: var(--primary); }
@@ -45,17 +40,10 @@ layout: default
         .card-body { padding: 15px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .card h3 { font-size: 1.1rem; margin: 0 0 15px 0; color: white; line-height: 1.4; }
         .btn-read { background: var(--primary); color: var(--dark); padding: 8px 15px; border-radius: 5px; font-weight: bold; }
-
         .ad-banner { background: linear-gradient(90deg, var(--secondary), #7000ff); padding: 12px; text-align: center; border-radius: 10px; margin: 20px; }
         .ad-banner a { color: white; text-decoration: none; font-weight: bold; font-size: 1rem; }
-
         footer { padding: 40px 20px; text-align: center; border-top: 1px solid #1e293b; color: #64748b; font-size: 0.9rem; }
-
-        @media (max-width: 600px) {
-            .hero { padding: 30px 10px; }
-            .grid { padding: 10px; gap: 15px; }
-            .tool-banner { margin: 10px; padding: 20px; }
-        }
+        @media (max-width: 600px) { .hero { padding: 30px 10px; } .grid { padding: 10px; gap: 15px; } .tool-banner { margin: 10px; padding: 20px; } }
     </style>
 </head>
 <body>
@@ -89,11 +77,7 @@ layout: default
     <div class="grid" id="blogGrid">
         {% for post in site.posts %}
         <a href="{{ post.url | relative_url }}" class="card">
-            {% if post.title contains "YouTube" %}
-                <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?v=99&auto=format&fit=crop&w=500&q=60" alt="{{ post.title }}">
-            {% else %}
-                <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=500&q=60" alt="{{ post.title }}">
-            {% endif %}
+            <img src="{{ post.thumbnail | default: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7' }}?auto=format&fit=crop&w=500&q=60" alt="{{ post.title }}">
             <div class="card-body">
                 <h3>{{ post.title }}</h3>
                 <span class="btn-read">Read Guide</span>
@@ -106,13 +90,10 @@ layout: default
         <a href="blog3.html" class="card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=60"><h3>SEO Secrets</h3><span class="btn-read">Read</span></a>
         <a href="blog4.html" class="card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=500&q=60"><h3>Real Estate AI</h3><span class="btn-read">Read</span></a>
         <a href="blog5.html" class="card"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=500&q=60"><h3>Content Strategy</h3><span class="btn-read">Read</span></a>
-
-        <div class="ad-banner" style="grid-column: 1 / -1;"><a href="https://www.effectivegatecpm.com/kr8e6re8?key=9481b157b4e811e30107482252adbe96">🚀 START EARNING NOW</a></div>
-
         <a href="blog6.html" class="card"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=60"><h3>Tech Innovation</h3><span class="btn-read">Read</span></a>
         <a href="blog7.html" class="card"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=500&q=60"><h3>E-commerce Growth</h3><span class="btn-read">Read</span></a>
         <a href="blog8.html" class="card"><img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=500&q=60"><h3>YouTube Wealth</h3><span class="btn-read">Read</span></a>
-        <a href="blog9.html" class="card"><img src="https://images.unsplash.com/photo-161116475-46b635cbca86?auto=format&fit=crop&w=500&q=60"><h3>SaaS Building</h3><span class="btn-read">Read</span></a>
+        <a href="blog9.html" class="card"><img src="https://images.unsplash.com/photo-1611162616475-46b635cbca86?auto=format&fit=crop&w=500&q=60"><h3>SaaS Building</h3><span class="btn-read">Read</span></a>
         <a href="blog10.html" class="card"><img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?auto=format&fit=crop&w=500&q=60"><h3>AI Agency</h3><span class="btn-read">Read</span></a>
         <a href="blog11.html" class="card"><img src="https://images.unsplash.com/photo-1611974714024-46202e0bb183?auto=format&fit=crop&w=500&q=60"><h3>Crypto Trading</h3><span class="btn-read">Read</span></a>
         <a href="blog12.html" class="card"><img src="https://images.unsplash.com/photo-1454165833767-027ffea9e78b?auto=format&fit=crop&w=500&q=60"><h3>Business Strategy</h3><span class="btn-read">Read</span></a>
