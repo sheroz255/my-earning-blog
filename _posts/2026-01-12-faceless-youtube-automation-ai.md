@@ -1,9 +1,12 @@
 ---
+thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0"
 image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0"
 layout: post
+thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0"
 title: "Faceless YouTube Automation 2026: Building a $20,000/Month AI Content Empire"
 tag: "youtube-automation"
 ---
+thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0"
 image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0"
 
 <div style="background: #fff1f2; border-left: 5px solid #be123c; padding: 15px; margin-bottom: 25px; border-radius: 8px; color: #9f1239;">
