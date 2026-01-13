@@ -27,7 +27,7 @@ With the integration of AI agents into Shopify and Google Ads, the technical bar
 Before we dive into the setup, watch how AI is reshaping the global retail landscape:
 
 <div style="text-align:center; margin: 20px 0;">
-    <iframe width="100%" height="315" src="https://www.youtube.com/embed/fN5mN_6pTdk" 
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/88Lh5G_zYy4" 
     title="YouTube video player" frameborder="0" 
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen 
