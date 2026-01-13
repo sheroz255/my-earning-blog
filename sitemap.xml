@@ -1,12 +1,12 @@
 ---
 layout: null
+sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
   {% for post in site.posts %}
     <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+      <loc>https://sheroz255.github.io/my-earning-blog{{ post.url }}</loc>
       <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
@@ -14,15 +14,12 @@ layout: null
   {% endfor %}
 
   {% for page in site.pages %}
-    {% if page.url contains '.html' and page.url != '/index.html' %}
+    {% if page.path contains '.html' and page.path != 'index.html' %}
     <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url | replace: "index.html", "" }}</loc>
-      <lastmod>2026-01-13T00:00:00+00:00</lastmod>
+      <loc>https://sheroz255.github.io/my-earning-blog/{{ page.path }}</loc>
       <changefreq>monthly</changefreq>
       <priority>0.7</priority>
     </url>
     {% endif %}
   {% endfor %}
-
 </urlset>
-
