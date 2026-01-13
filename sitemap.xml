@@ -1,9 +1,9 @@
 ---
 layout: null
-sitemap: false
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
   {% for post in site.posts %}
     <url>
       <loc>https://sheroz255.github.io/my-earning-blog{{ post.url }}</loc>
@@ -13,13 +13,15 @@ sitemap: false
     </url>
   {% endfor %}
 
-  {% for page in site.pages %}
-    {% if page.path contains '.html' and page.path != 'index.html' %}
+  {% for i in (1..35) %}
     <url>
-      <loc>https://sheroz255.github.io/my-earning-blog/{{ page.path }}</loc>
-      <changefreq>monthly</changefreq>
+      <loc>https://sheroz255.github.io/my-earning-blog/blog{{ i }}.html</loc>
       <priority>0.7</priority>
     </url>
-    {% endif %}
   {% endfor %}
+
+  <url><loc>https://sheroz255.github.io/my-earning-blog/index.html</loc><priority>1.0</priority></url>
+  <url><loc>https://sheroz255.github.io/my-earning-blog/humanizer.html</loc><priority>0.8</priority></url>
+  <url><loc>https://sheroz255.github.io/my-earning-blog/about.html</loc><priority>0.5</priority></url>
+
 </urlset>
