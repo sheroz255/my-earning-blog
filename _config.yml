@@ -3,10 +3,8 @@ url: "https://sheroz255.github.io"
 baseurl: "/my-earning-blog"
 description: "Global Wealth Intelligence & AI Tools 2026"
 
-# Ye line sitemap ko automatic banaye gi (Disabled to use manual sitemap)
-# plugins:
-#   - jekyll-sitemap
+plugins:
+  - jekyll-sitemap
 
-# Settings
 markdown: kramdown
 theme: minima
